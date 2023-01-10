@@ -1,0 +1,6 @@
+dependencies:
+  - base == 4.*
+  - turtle
+executables:
+  turtle-playground:
+    main: Main.hs
