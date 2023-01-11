@@ -3,6 +3,21 @@ version: 0.0.0
 dependencies:
   - base == 4.*
   - turtle
+  - text
 
 library:
   source-dirs: src
+  modules: TurtlePlayground.Prelude
+
+ghc-options:
+  - -Wall
+  - -Wextra
+  - -Werror
+  - -Wno-name-shadowing
+  - -haddock
+
+default-extensions:
+  - OverloadedStrings
+  - BlockArguments
+  - ImportQualifiedPost
+  - NoImplicitPrelude

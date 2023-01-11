@@ -1,0 +1,15 @@
+-- show loaded modules in gray on line above a "λ" prompt in cyan
+:set prompt "\SOH\ESC[37m%s\n\ESC[0;36m\STXλ \SOH\ESC[m\STX"
+-- use a "⋮" prompt in cyan for :{ ... :}
+-- prompt2 renamed to prompt-cont in 8.2
+:set prompt-cont "\SOH\ESC[0;36m\STX⋮ \SOH\ESC[m\STX"
+
+:set -XOverloadedStrings -XBlockArguments -XImportQualifiedPost -XNoImplicitPrelude
+
+:m +Prelude
+:def hoogle pure . (":! hoogle " <>) . show
+:def hinfo pure . (":! hoogle --info " <>) . show
+:m -Prelude
+
+import Data.Text qualified as Text
+import Turtle qualified as Turtle
