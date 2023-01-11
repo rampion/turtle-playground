@@ -4,6 +4,7 @@ dependencies:
   - base == 4.*
   - turtle
   - text
+  - foldl
 
 library:
   source-dirs: src

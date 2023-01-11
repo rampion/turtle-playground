@@ -11,5 +11,6 @@
 :def hinfo pure . (":! hoogle --info " <>) . show
 :m -Prelude
 
+import Control.Foldl qualified as Fold
 import Data.Text qualified as Text
 import Turtle qualified as Turtle
